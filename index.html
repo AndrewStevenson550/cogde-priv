@@ -18,31 +18,10 @@
     
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
     
-    <style>
-        /* This is necessary for the card flip */
-        .card-flipper {
-            perspective: 1000px;
-        }
-
-        .card-inner {
-            transition: transform 0.6s;
-            transform-style: preserve-3d;
-        }
-
-        .card-flipped .card-inner {
-            transform: rotateY(180deg);
-        }
-
-        .card-front,
-        .card-back {
-            backface-visibility: hidden;
-            -webkit-backface-visibility: hidden; /* Safari */
-        }
-
-        .card-back {
-            transform: rotateY(180deg);
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="script.js" type="module"></script>
+    
 </head>
 <body class="font-inter bg-gray-100 dark:bg-gray-900">
     <div id="app">
@@ -53,19 +32,5 @@
             </div>
         </div>
     </div>
-
-    <script type="module">
-        // --- Tailwind Config & Dark Mode Setup ---
-        tailwind.config = {
-            // ... (rest of the config)
-        };
-        if (localStorage.theme === 'dark' || /*... (rest of dark mode logic) ...*/ ) {
-            // ...
-        }
-
-        // --- FIREBASE IMPORTS ---
-        import { initializeApp, setLogLevel } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
-        // ... (rest of all the JavaScript code) ...
-    </script>
 </body>
 </html>
